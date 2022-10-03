@@ -178,8 +178,6 @@ app.get('/movies/director/:directorName', (req, res) => {
   });
 });
 
-
-
 // listen for requests
 app.listen(8080, () => {
   console.log('Your app is listening on port 8080.');

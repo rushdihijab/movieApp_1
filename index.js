@@ -24,6 +24,9 @@ let auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
 
+app.get('/', (req, res)=> {
+  res.send('rushdi node api');
+})
 // greate new user
 app.post('/users', [
   check('Username', 'Username is required').isLength({min: 5}),

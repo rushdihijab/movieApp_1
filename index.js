@@ -23,7 +23,7 @@ const passport = require('passport');
 require('./passport');
 
 app.get('/', (req, res)=> {
-  res.send('rushdi node api');
+  res.send('pleaes review my documention at https://documenter.getpostman.com/view/22600836/2s847HPsk2 ');
 })
 // greate new user
 app.post('/users', [
@@ -209,7 +209,7 @@ app.get('/movies/genre/:genreName', passport.authenticate('jwt', { session: fals
   });
 });
 
-// get directo by directo name 
+// get director by director name 
 app.get('/movies/director/:directorName', passport.authenticate('jwt', { session: false }), (req, res) => {
   Movies.find({ 'Director.Name': req.params.directorName})
   .then((movie) => {

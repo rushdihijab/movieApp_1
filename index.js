@@ -35,9 +35,9 @@ app.use(cors({
 }));
 
 
-//app.get('/', (req, res) => {
-// res.send('pleaes review my documention at https://documenter.getpostman.com/view/22600836/2s847HPsk2 ');
-//})
+app.get('/', (req, res) => {
+  res.send('pleaes review my documention at https://documenter.getpostman.com/view/22600836/2s847HPsk2 ');
+})
 // greate new user
 app.post('/users', [
   check('Username', 'Username is required').isLength({ min: 5 }),

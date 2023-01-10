@@ -199,7 +199,7 @@ app.get('/movies'), (req, res) => {
       console.error(err);
       res.status(500).send('Error: ' + err);
     });
-});
+};
 
 // Get a movies by titel
 app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), (req, res) => {

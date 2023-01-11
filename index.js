@@ -190,7 +190,7 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false }),
     });
 });
 // Get all movies
-app.get('/movies'), (req, res) => {
+app.get('/movies', (req, res) => {
   Movies.find()
     .then((movies) => {
       res.status(201).json(movies);
@@ -199,7 +199,7 @@ app.get('/movies'), (req, res) => {
       console.error(err);
       res.status(500).send('Error: ' + err);
     });
-};
+});
 
 // Get a movies by titel
 app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), (req, res) => {

@@ -107,7 +107,7 @@ app.get('/users/:Username', passport.authenticate('jwt', { session: false }), (r
 app.put('/users/:Username',
   passport.authenticate("jwt", { session: false }),
   [
-    check("Username", "Username is required").isLength({ min: 5 }),
+    check("Username", "Username is required").isLength({ min: 3 }),
     check(
       "Username",
       "Username contains non alphanumeric characters - not allowed."
@@ -190,7 +190,7 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false }),
     });
 });
 // Get all movies
-app.get('/movies', (req, res) => {
+app.get('/movies', passport.authenticate('jwt', { session: false }), (req, res) => {
   Movies.find()
     .then((movies) => {
       res.status(201).json(movies);

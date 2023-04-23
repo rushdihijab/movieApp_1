@@ -22,7 +22,7 @@ let auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
 
-let allowedOrigins = ['http://localhost:8080', 'http://testsite.com', 'http://localhost:1234', 'https://rushdi-movie-app.netlify.app'];
+let allowedOrigins = ['http://localhost:8080', 'http://testsite.com', 'http://localhost:1234', 'http://localhost:4200/', 'https://rushdi-movie-app.netlify.app'];
 
 app.use(cors({
   origin: (origin, callback) => {
